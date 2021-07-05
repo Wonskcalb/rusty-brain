@@ -1,0 +1,68 @@
+{% extends "base" %}
+
+{% block title %}Home{% endblock %}
+
+{% block container %}
+    <div class="paster">
+
+        <form
+            class="uk-grid uk-grid-small uk-form-horizontal"
+            uk-grid
+            action="/"
+            method="POST">
+
+            <div class="uk-width-1-1">
+                <div class="uk-card-default uk-card-body">
+                    <h2 class="uk-card-title">I'll be generating a paste at this URL</h2>
+                    <p>Don't like it? Change the last part, it'll be updated</p>
+                <code class="uk-text-lead"> {{ base_paste_url }}/</code>
+                <input
+                    class="paste_id_input uk-form-blank uk-text-lead"
+                    id="seed_id"
+                    name="seed_id"
+                    placeholder="Your paste name"
+                    value="{{ paste_id }}"/>
+
+                </div>
+            </div>
+
+            <div class="uk-width-2-3@s">
+                <label class="uk-form-label" for="paste_name">Title</label>
+                    <input
+                        id="paste_name"
+                        name="paste_name" class="uk-input"
+                        type="text"
+                        placeholder="Foo">
+            </div>
+
+            <div class="uk-width-1-3@s">
+                <label class="uk-form-label" for="paste_lang">Language</label>
+                <select
+                    id="paste_lang"
+                    name="paste_lang"
+                    class="uk-select" >
+                    <option value="txt" selected="selected">Plain Text</option>
+                    <option value="json">JSON</option>
+                    <option value="py">Python</option>
+                    <option value="rs">Rust</option>
+                </select>
+            </div>
+
+            <div class="uk-width-1-1">
+                <label class="uk-form-label" for="paste_body">Body</label>
+                <textarea
+                    id="paste_body"
+                    name="paste_body"
+                    class="uk-textarea"
+                    rows=20></textarea>
+            </div>
+
+            <div class="uk-width-1-1 uk-margin-xlarge-top">
+                <input class="uk-width-1-1 uk-button uk-button-large" type="submit"></input>
+            </div>
+
+        </form>
+
+
+    </div>
+{% endblock %}

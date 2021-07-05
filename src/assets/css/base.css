@@ -1,0 +1,46 @@
+html,
+body,
+* {
+  color: var(--main-light-color);
+  background-color: var(--main-bg-color);
+}
+
+
+.uk-navbar-container,
+.uk-navbar-container:not(.uk-navbar-transparent),
+.uk-navbar-container *,
+.uk-navbar-container h1 > a {
+  background-color: var(--main-strong-color);
+  color: var(--main-light-color);
+  font-size: 5rem;
+}
+
+.uk-card,
+.uk-card-default {
+  border: 4px solid var(--main-strong-color);
+
+}
+
+.uk-card,
+.uk-card-default,
+.uk-card-body *,
+.uk-card-body h2.uk-card-title {
+  background-color: var(--main-bg-color);
+  color: var(--main-light-color);
+}
+
+.paster .uk-form-label {
+  font-size: 1.5rem;
+  color: var(--main-light-color) !important;
+}
+
+.paster > form input[type="submit"] {
+  color: var(--main-bg-color);
+  background-color: var(--main-accent-color);
+}
+
+.paster .paste_id_input {
+  border-bottom-color: var(--main-accent-color);
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+}

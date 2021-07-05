@@ -1,0 +1,24 @@
+[package]
+name = "rusty-brain"
+version = "0.1.0"
+authors = ["Valentin Famelart <valentin.famelart@invenis.co>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.4.10"
+
+[dependencies.rocket_contrib]
+version = "0.4.10"
+default-features = false
+features = ["serve", "tera_templates"]
+
+[profile.dev]
+opt-level = 0  # Controls the --opt-level the compiler builds with
+debug = true   # Controls whether the compiler passes `-g`
+
+# The release profile, used for `cargo build --release`
+[profile.release]
+opt-level = 3
+debug = false
